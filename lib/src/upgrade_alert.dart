@@ -228,6 +228,8 @@ class UpgradeAlertState extends State<UpgradeAlert> {
       print('upgrader: showTheDialog releaseNotes: $releaseNotes');
     }
 
+    if (!mounted) return;
+
     // Save the date/time as the last time alerted.
     widget.upgrader.saveLastAlerted();
 
